@@ -10,7 +10,7 @@ import {
 import { formatCurrency } from './utils';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
-
+debugger
 export async function fetchRevenue() {
   try {
     // Artificially delay a response for demo purposes.
@@ -72,7 +72,7 @@ export async function fetchCardData() {
     const numberOfCustomers = Number(data[1][0].count ?? '0');
     const totalPaidInvoices = formatCurrency(data[2][0].paid ?? '0');
     const totalPendingInvoices = formatCurrency(data[2][0].pending ?? '0');
-
+    debugger
     return {
       numberOfCustomers,
       numberOfInvoices,
