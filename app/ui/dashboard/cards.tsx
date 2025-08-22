@@ -15,6 +15,7 @@ const iconMap = {
 };
 
 export default async function CardWrapper() {
+  debugger
   const {
     numberOfInvoices,
     numberOfCustomers,
